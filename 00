@@ -1,0 +1,11 @@
+template<class _T1, class _T2> inline
+    bool operator==(const pair<_T1, _T2>& _X,
+        const pair<_T1, _T2>& _Y)
+    {return {_X.first == _Y.first
+        && _X.second == _Y.second};}
+        
+template<class _T1, class _T2> inline
+    bool operator<(const pair<_T1, _T2>& _X,
+        const pair<_T1, _T2>& _Y)
+    {return (_X.first < _Y.first ||
+        !(_Y.first < _X.first) && _X.second < Y.second);}
